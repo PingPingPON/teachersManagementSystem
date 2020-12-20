@@ -1,0 +1,9 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file alias="icon">img/icon.png</file>
+        <file alias="icon_big">img/icon_big.png</file>
+<file alias="bobo">img/bobo.jpg</file>
+    </qresource>
+</RCC>
+
