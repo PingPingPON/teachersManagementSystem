@@ -42,6 +42,8 @@ void MainWindow::initial() {
     connect(ui->pb_change_state_rework, SIGNAL(clicked(bool)), this, SLOT(changeStateRework()));
     connect(ui->pb_change_state_retire, SIGNAL(clicked(bool)), this, SLOT(changeStateRetire()));
 
+    this->setWindowFlags(windowFlags() & ~Qt::WindowMaximizeButtonHint);
+    this->setFixedSize(this->width(), this->height());
     qDebug() << "Start success.";
 }
 
@@ -429,7 +431,7 @@ void MainWindow::changeStateRetire() {
 
 void MainWindow::connectSQLite() {
     database=QSqlDatabase::addDatabase("QSQLITE");
-    database.setDatabaseName("teachers_managerment_system.db");
+    database.setDatabaseName("teachers_management_system.db");
     if(!database.open()) {
         qDebug() << database.lastError();
         return;
@@ -450,7 +452,11 @@ void MainWindow::createDB() {
         "hireDate date not null,"
         "state    varchar(20) check ( state in ('在职', '休假', '离职', '退休') ) not null"
         ");");
-
+    database.exec("create table if not exists administrator"
+        "("
+        "id       integer primary key autoincrement,"
+        "password varchar(20)"
+        ");");
     if (database.lastError().isValid())
     {
         qDebug() << database.lastError();
