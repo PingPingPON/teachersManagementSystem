@@ -33,9 +33,16 @@ void MainWindow::initial()
     connect(ui->pb_confirm_login, SIGNAL(clicked(bool)), this, SLOT(signInConfirm()));
     connect(ui->pb_cancel_login, SIGNAL(clicked(bool)), this, SLOT(signInCancel()));
     connect(ui->pb_search, SIGNAL(clicked(bool)), this, SLOT(updateAttending()));
+
     connect(ui->pb_hire_input_confirm, SIGNAL(clicked(bool)), this, SLOT(hireConfirm()));
     connect(ui->pb_hire_input_cancel, SIGNAL(clicked(bool)), this, SLOT(hireCancel()));
     connect(ui->pb_hire_output_clear, SIGNAL(clicked(bool)), this, SLOT(hireInformationClear()));
+
+    connect(ui->le_change_rank_input_id, SIGNAL(textEdited(const QString &)), this, SLOT(changeRankSearch()));
+    connect(ui->pb_change_rank_input_confirm, SIGNAL(clicked(bool)), this, SLOT(changeRankConfirm()));
+    connect(ui->pb_change_rank_input_cancel, SIGNAL(clicked(bool)), this, SLOT(changeRankCancel()));
+    connect(ui->pb_change_rank_output_clear, SIGNAL(clicked(bool)), this, SLOT(changeRankInformationClear()));
+
     connect(ui->pb_change_state_search, SIGNAL(clicked(bool)), this, SLOT(changeStateSearch()));
     connect(ui->pb_change_state_fire, SIGNAL(clicked(bool)), this, SLOT(changeStateFire()));
     connect(ui->pb_change_state_vacation, SIGNAL(clicked(bool)), this, SLOT(changeStateVacation()));
@@ -59,10 +66,22 @@ void MainWindow::setLineEdit()
     ui->le_user_name->setMaxLength(20);
     ui->le_password->setEchoMode(QLineEdit::Password);
 
-    ui->le_hire_output_id->setReadOnly(true);
-    ui->le_hire_output_name->setReadOnly(true);
-    ui->le_hire_output_rank->setReadOnly(true);
-    ui->le_hire_output_subject->setReadOnly(true);
+    ui->le_hire_output_id->setEnabled(false);
+    ui->le_hire_output_name->setEnabled(false);
+    ui->le_hire_output_rank->setEnabled(false);
+    ui->le_hire_output_subject->setEnabled(false);
+    ui->le_hire_output_hireDate->setEnabled(false);
+
+    ui->le_change_rank_input_name->setEnabled(false);
+    ui->le_change_rank_input_rank->setEnabled(false);
+    ui->le_change_rank_input_subject->setEnabled(false);
+    ui->le_change_rank_input_hireDate->setEnabled(false);
+    ui->le_change_rank_input_state->setEnabled(false);
+
+    ui->le_change_rank_output_id->setEnabled(false);
+    ui->le_change_rank_output_name->setEnabled(false);
+    ui->le_change_rank_output_rank->setEnabled(false);
+    ui->le_change_rank_output_subject->setEnabled(false);
 }
 
 void MainWindow::attending(QString &query)
@@ -89,6 +108,12 @@ void MainWindow::designHire()
 {
     ui->lb_hire_output->hide();
     ui->pb_hire_output_clear->hide();
+}
+
+void MainWindow::designChangeRank()
+{
+    ui->lb_change_rank_output->hide();
+    ui->pb_change_rank_output_clear->hide();
 }
 
 void MainWindow::changeState(QString &query)
@@ -261,6 +286,137 @@ void MainWindow::hireInformationClear()
     ui->le_hire_output_subject->clear();
     ui->le_hire_output_hireDate->clear();
     ui->pb_hire_output_clear->hide();
+}
+
+void MainWindow::changeRankSearch()
+{
+    QString id = ui->le_change_rank_input_id->text();
+    QSqlQuery query;
+    QString sql = QString("select * from teachers where id='%1';").arg(id);
+    qDebug() << sql;
+    QString name, rank, subject, hireDate, state;
+    if (query.exec(sql))
+    {
+        while (query.next())
+        {
+            name = query.value(1).toString();
+            rank = query.value(2).toString();
+            subject = query.value(3).toString();
+            hireDate = query.value(4).toString();
+            state = query.value(5).toString();
+        }
+    }
+    else
+    {
+        name.clear();
+        rank.clear();
+        subject.clear();
+        hireDate.clear();
+        state.clear();
+    }
+    ui->le_change_rank_input_name->setText(name);
+    ui->le_change_rank_input_rank->setText(rank);
+    ui->le_change_rank_input_subject->setText(subject);
+    ui->le_change_rank_input_hireDate->setText(hireDate);
+    ui->le_change_rank_input_state->setText(state);
+}
+
+void MainWindow::changeRankConfirm()
+{
+    const int new_rank_index = ui->cmbBx_change_rank_input_new_rank->currentIndex();
+    const int new_subject_index = ui->cmbBx_change_rank_input_new_subject->currentIndex();
+
+    QString id = ui->le_change_rank_input_id->text();
+    QString name = ui->le_change_rank_input_name->text();
+    QString rank = ui->le_change_rank_input_rank->text();
+    QString subject = ui->le_change_rank_input_subject->text();
+    QString hireDate = ui->le_change_rank_input_hireDate->text();
+    QString state = ui->le_change_rank_input_state->text();
+
+    if (state.isEmpty())
+    {
+        QMessageBox::warning(NULL, "warning", "输入教师信息不存在", "重试");
+        return;
+    }
+    if (!new_rank_index && !new_subject_index)
+    {
+        QMessageBox::warning(NULL, "warning", "请选择至少一项修改项", "重试");
+        return;
+    }
+    QSqlQuery query;
+    QString new_rank, new_subject;
+    int count = 0;
+    QString sql = QString("update teachers set ");
+    if (new_rank_index)
+    {
+        if (count)
+            sql += ", ";
+        new_rank = ui->cmbBx_change_rank_input_new_rank->currentText();
+        sql += QString("rank='%1' ").arg(new_rank);
+        ++count;
+    }
+    else
+        new_rank = rank;
+    if (new_subject_index)
+    {
+        if (count)
+            sql += ", ";
+        new_subject = ui->cmbBx_change_rank_input_new_subject->currentText();
+        sql += QString("subject='%1' ").arg(new_subject);
+        ++count;
+    }
+    else
+        new_subject = subject;
+
+    sql += QString("where id='%1';").arg(id);
+    qDebug() << sql;
+    query.exec(sql);
+    updateAttending();
+    changeStateSearch();
+    if (database.lastError().isValid())
+    {
+        qDebug() << database.lastError();
+        return;
+    }
+    QMessageBox::information(NULL, "修改成功", "修改成功", QMessageBox::Yes);
+
+    ui->le_change_rank_input_id->clear();
+    ui->le_change_rank_input_name->clear();
+    ui->le_change_rank_input_rank->clear();
+    ui->le_change_rank_input_subject->clear();
+    ui->le_change_rank_input_hireDate->clear();
+    ui->le_change_rank_input_state->clear();
+    ui->cmbBx_change_rank_input_new_rank->setCurrentIndex(0);
+    ui->cmbBx_change_rank_input_new_subject->setCurrentIndex(0);
+
+    ui->lb_change_rank_output->show();
+    ui->pb_change_rank_output_clear->show();
+    ui->le_change_rank_output_id->setText(id);
+    ui->le_change_rank_output_name->setText(name);
+    ui->le_change_rank_output_rank->setText(new_rank);
+    ui->le_change_rank_output_subject->setText(new_subject);
+}
+
+void MainWindow::changeRankCancel()
+{
+    ui->le_change_rank_input_id->clear();
+    ui->le_change_rank_input_name->clear();
+    ui->le_change_rank_input_rank->clear();
+    ui->le_change_rank_input_subject->clear();
+    ui->le_change_rank_input_hireDate->clear();
+    ui->le_change_rank_input_state->clear();
+    ui->cmbBx_change_rank_input_new_rank->setCurrentIndex(0);
+    ui->cmbBx_change_rank_input_new_subject->setCurrentIndex(0);
+}
+
+void MainWindow::changeRankInformationClear()
+{
+    ui->lb_change_rank_output->hide();
+    ui->le_change_rank_output_id->clear();
+    ui->le_change_rank_output_name->clear();
+    ui->le_change_rank_output_rank->clear();
+    ui->le_change_rank_output_subject->clear();
+    ui->pb_change_rank_output_clear->hide();
 }
 
 void MainWindow::changeStateSearch()

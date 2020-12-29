@@ -28,10 +28,18 @@ public:
 public slots:
     void signInConfirm();
     void signInCancel();
+
     void updateAttending();
+
     void hireConfirm();
     void hireCancel();
     void hireInformationClear();
+
+    void changeRankSearch();
+    void changeRankConfirm();
+    void changeRankCancel();
+    void changeRankInformationClear();
+
     void changeStateSearch();
     void changeStateFire();
     void changeStateVacation();
@@ -55,6 +63,7 @@ private:
     void attending(QString &);
     void designAttending();
     void designHire();
+    void designChangeRank();
     void changeState(QString &);
     void designChangeState();
     void changeStateSelection(int &, int &);
