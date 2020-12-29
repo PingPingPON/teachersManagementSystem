@@ -345,7 +345,7 @@ void MainWindow::changeRankConfirm()
     }
     QSqlQuery query;
     QString new_rank, new_subject;
-    int count = 0;
+    int count = 0, same = 0;
     QString sql = QString("update teachers set ");
     if (new_rank_index)
     {
@@ -354,6 +354,8 @@ void MainWindow::changeRankConfirm()
         new_rank = ui->cmbBx_change_rank_input_new_rank->currentText();
         sql += QString("rank='%1' ").arg(new_rank);
         ++count;
+        if (new_rank == rank)
+            ++same;
     }
     else
         new_rank = rank;
@@ -364,9 +366,17 @@ void MainWindow::changeRankConfirm()
         new_subject = ui->cmbBx_change_rank_input_new_subject->currentText();
         sql += QString("subject='%1' ").arg(new_subject);
         ++count;
+        if (new_subject == subject)
+            ++same;
     }
     else
         new_subject = subject;
+
+    if (same == count)
+    {
+        QMessageBox::warning(NULL, "warning", "请至少更改一项", "重试");
+        return;
+    }
 
     sql += QString("where id='%1';").arg(id);
     qDebug() << sql;
