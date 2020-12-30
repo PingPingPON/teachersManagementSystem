@@ -1,1747 +1,1747 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>800</width>
-    <height>600</height>
-   </rect>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>800</width>
-    <height>600</height>
-   </size>
-  </property>
-  <property name="windowTitle">
-   <string>MainWindow</string>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayoutTab">
-    <item>
-     <widget class="QTabWidget" name="tabWidget">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>420</width>
-        <height>550</height>
-       </size>
-      </property>
-      <property name="currentIndex">
-       <number>3</number>
-      </property>
-      <property name="tabBarAutoHide">
-       <bool>false</bool>
-      </property>
-      <widget class="QWidget" name="tab_login">
-       <attribute name="title">
-        <string>管理员登录</string>
-       </attribute>
-       <widget class="QLabel" name="lb_user_name">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
         <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>100</y>
-          <width>60</width>
-          <height>60</height>
-         </rect>
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>800</width>
+                <height>600</height>
+            </rect>
         </property>
-        <property name="text">
-         <string>登录ID</string>
+        <property name="minimumSize">
+            <size>
+                <width>800</width>
+                <height>600</height>
+            </size>
         </property>
-       </widget>
-       <widget class="QLabel" name="lb_password">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>160</y>
-          <width>60</width>
-          <height>60</height>
-         </rect>
+        <property name="windowTitle">
+            <string>MainWindow</string>
         </property>
-        <property name="text">
-         <string>密码</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="le_user_name">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>115</y>
-          <width>300</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="le_password">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>175</y>
-          <width>300</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pb_confirm_login">
-        <property name="geometry">
-         <rect>
-          <x>130</x>
-          <y>270</y>
-          <width>80</width>
-          <height>25</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>确定</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pb_cancel_login">
-        <property name="geometry">
-         <rect>
-          <x>290</x>
-          <y>270</y>
-          <width>80</width>
-          <height>25</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>取消</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lb_bobo">
-        <property name="geometry">
-         <rect>
-          <x>480</x>
-          <y>0</y>
-          <width>320</width>
-          <height>500</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>TextLabeld</string>
-        </property>
-       </widget>
-       <widget class="Line" name="vertical_line">
-        <property name="geometry">
-         <rect>
-          <x>450</x>
-          <y>0</y>
-          <width>30</width>
-          <height>520</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_attending">
-       <attribute name="title">
-        <string>在职教师列表</string>
-       </attribute>
-       <layout class="QGridLayout" name="verticalLayoutAttending">
-        <item row="1" column="0">
-         <widget class="QWidget" name="attendingSearch" native="true">
-          <property name="minimumSize">
-           <size>
-            <width>420</width>
-            <height>50</height>
-           </size>
-          </property>
-          <widget class="QLabel" name="lb_search_rank">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>20</y>
-             <width>30</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>职称</string>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_search_rank">
-           <property name="geometry">
-            <rect>
-             <x>60</x>
-             <y>20</y>
-             <width>90</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>三级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>二级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>一级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>高级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>正高级教师</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QLabel" name="lb_search_subject">
-           <property name="geometry">
-            <rect>
-             <x>180</x>
-             <y>20</y>
-             <width>30</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>科目</string>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_search_subject">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>20</y>
-             <width>90</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>语文</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>数学</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>外语</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>物理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>化学</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>生物</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>政治</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>历史</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>地理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>通用技术</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>信息技术</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>体育</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>音乐</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>美术</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QLabel" name="lb_search_state">
-           <property name="geometry">
-            <rect>
-             <x>330</x>
-             <y>20</y>
-             <width>60</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>在职状态</string>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_search_state">
-           <property name="geometry">
-            <rect>
-             <x>390</x>
-             <y>20</y>
-             <width>90</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>在职</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>休假</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>离职</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>退休</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QPushButton" name="pb_search">
-           <property name="geometry">
-            <rect>
-             <x>590</x>
-             <y>20</y>
-             <width>90</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>查询</string>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QTableView" name="tv_attending">
-          <property name="sizeIncrement">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="autoScroll">
-           <bool>false</bool>
-          </property>
-          <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
-          </property>
-          <property name="alternatingRowColors">
-           <bool>true</bool>
-          </property>
-          <property name="selectionMode">
-           <enum>QAbstractItemView::SingleSelection</enum>
-          </property>
-          <property name="selectionBehavior">
-           <enum>QAbstractItemView::SelectRows</enum>
-          </property>
-          <property name="verticalScrollMode">
-           <enum>QAbstractItemView::ScrollPerItem</enum>
-          </property>
-          <property name="gridStyle">
-           <enum>Qt::SolidLine</enum>
-          </property>
-          <property name="cornerButtonEnabled">
-           <bool>false</bool>
-          </property>
-          <attribute name="verticalHeaderVisible">
-           <bool>false</bool>
-          </attribute>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_hire">
-       <attribute name="title">
-        <string>聘用教师</string>
-       </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayoutHire">
-        <item>
-         <widget class="QWidget" name="hireInformationInput" native="true">
-          <widget class="QLabel" name="lb_hire_input">
-           <property name="geometry">
-            <rect>
-             <x>80</x>
-             <y>40</y>
-             <width>160</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>雇用教师信息输入</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_hire_input_name">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>80</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>姓名</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_hire_input_name">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>80</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="maxLength">
-            <number>20</number>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_hire_input_rank">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>140</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>职称</string>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_hire_input_rank">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>140</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>三级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>二级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>一级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>高级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>正高级教师</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QLabel" name="lb_hire_input_subject">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>200</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>科目</string>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_hire_input_subject">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>200</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>语文</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>数学</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>外语</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>物理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>化学</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>生物</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>政治</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>历史</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>地理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>通用技术</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>信息技术</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>体育</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>音乐</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>美术</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QPushButton" name="pb_hire_input_confirm">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>300</y>
-             <width>100</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>确定</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_hire_input_cancel">
-           <property name="geometry">
-            <rect>
-             <x>210</x>
-             <y>300</y>
-             <width>100</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>取消</string>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="Line" name="line">
-          <property name="minimumSize">
-           <size>
-            <width>5</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="hireInformationOutput" native="true">
-          <widget class="QLabel" name="lb_hire_output">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="geometry">
-            <rect>
-             <x>80</x>
-             <y>40</y>
-             <width>160</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>雇用教师成功</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_hire_output_id">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>80</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>编号</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_hire_output_id">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>80</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_hire_output_name">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>140</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>姓名</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_hire_output_name">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>140</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_hire_output_rank">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>200</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>职称</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_hire_output_rank">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>200</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_hire_output_subject">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>260</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>科目</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_hire_output_subject">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>260</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_hire_output_clear">
-           <property name="geometry">
-            <rect>
-             <x>120</x>
-             <y>390</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>清除</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_hire_output_hireDate">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>320</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>入职日期</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_hire_output_hireDate">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>320</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_change_rank_information">
-       <attribute name="title">
-        <string>教师职称科目切换</string>
-       </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayoutHire">
-        <item>
-         <widget class="QWidget" name="changeRankInformationInput" native="true">
-          <widget class="QLabel" name="lb_change_rank_input_id">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>60</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>编号</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_input_id">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>60</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_input_name">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>120</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>姓名</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_input_name">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>120</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_input_rank">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>180</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>职称</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_input_rank">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>180</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_input_subject">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>240</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>科目</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_input_subject">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>240</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_input_hireDate">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>300</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>入职日期</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_input_hireDate">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>300</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_input">
-           <property name="geometry">
-            <rect>
-             <x>100</x>
-             <y>10</y>
-             <width>160</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>待切换教师信息输入</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_change_rank_input_new_rank">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>430</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>三级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>二级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>一级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>高级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>正高级教师</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_change_rank_input_new_subject">
-           <property name="geometry">
-            <rect>
-             <x>220</x>
-             <y>430</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>语文</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>数学</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>外语</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>物理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>化学</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>生物</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>政治</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>历史</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>地理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>通用技术</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>信息技术</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>体育</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>音乐</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>美术</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_input_new_rank">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>400</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>新职称</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_change_rank_input_confirm">
-           <property name="geometry">
-            <rect>
-             <x>70</x>
-             <y>470</y>
-             <width>100</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>确定</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_change_rank_input_cancel">
-           <property name="geometry">
-            <rect>
-             <x>220</x>
-             <y>470</y>
-             <width>100</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>取消</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_input_new_subject">
-           <property name="geometry">
-            <rect>
-             <x>220</x>
-             <y>400</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>新科目</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_input_state">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>360</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>在职状态</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_input_state">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>360</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item>
-         <widget class="Line" name="line">
-          <property name="minimumSize">
-           <size>
-            <width>5</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="changeRankInformationOutput" native="true">
-          <widget class="QLabel" name="lb_change_rank_output_name">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>120</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>姓名</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_output_id">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>60</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="maxLength">
-            <number>20</number>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_output_subject">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>240</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>科目</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_output">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="geometry">
-            <rect>
-             <x>80</x>
-             <y>10</y>
-             <width>160</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>教师信息切换成功</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_output_name">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>120</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_output_rank">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>180</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_rank_output_subject">
-           <property name="geometry">
-            <rect>
-             <x>130</x>
-             <y>240</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_change_rank_output_clear">
-           <property name="geometry">
-            <rect>
-             <x>160</x>
-             <y>330</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>清除</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_output_id">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>60</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>编号</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_rank_output_rank">
-           <property name="geometry">
-            <rect>
-             <x>50</x>
-             <y>180</y>
-             <width>80</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>职称</string>
-           </property>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="tab_change_state">
-       <attribute name="title">
-        <string>教师在职状态切换</string>
-       </attribute>
-       <layout class="QVBoxLayout" name="verticalLayoutChangeState">
-        <item>
-         <widget class="QTableView" name="tv_change_state">
-          <property name="sizeIncrement">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="autoScroll">
-           <bool>false</bool>
-          </property>
-          <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
-          </property>
-          <property name="alternatingRowColors">
-           <bool>true</bool>
-          </property>
-          <property name="selectionMode">
-           <enum>QAbstractItemView::SingleSelection</enum>
-          </property>
-          <property name="selectionBehavior">
-           <enum>QAbstractItemView::SelectRows</enum>
-          </property>
-          <property name="verticalScrollMode">
-           <enum>QAbstractItemView::ScrollPerItem</enum>
-          </property>
-          <property name="gridStyle">
-           <enum>Qt::SolidLine</enum>
-          </property>
-          <property name="cornerButtonEnabled">
-           <bool>false</bool>
-          </property>
-          <attribute name="verticalHeaderVisible">
-           <bool>false</bool>
-          </attribute>
-         </widget>
-        </item>
-        <item>
-         <widget class="Line" name="line">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>5</height>
-           </size>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="attendingSearch" native="true">
-          <property name="minimumSize">
-           <size>
-            <width>420</width>
-            <height>100</height>
-           </size>
-          </property>
-          <widget class="QLabel" name="lb_change_state_id">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>10</y>
-             <width>30</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>ID:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_state_id">
-           <property name="geometry">
-            <rect>
-             <x>30</x>
-             <y>10</y>
-             <width>70</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_state_name">
-           <property name="geometry">
-            <rect>
-             <x>100</x>
-             <y>10</y>
-             <width>40</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>姓名:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="le_change_state_name">
-           <property name="geometry">
-            <rect>
-             <x>140</x>
-             <y>10</y>
-             <width>100</width>
-             <height>30</height>
-            </rect>
-           </property>
-          </widget>
-          <widget class="QLabel" name="lb_change_state_rank">
-           <property name="geometry">
-            <rect>
-             <x>240</x>
-             <y>10</y>
-             <width>40</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>职称:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_change_state_rank">
-           <property name="geometry">
-            <rect>
-             <x>280</x>
-             <y>10</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>三级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>二级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>一级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>高级教师</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>正高级教师</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QLabel" name="lb_change_state_subject">
-           <property name="geometry">
-            <rect>
-             <x>400</x>
-             <y>10</y>
-             <width>40</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>科目:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_change_state_subject">
-           <property name="geometry">
-            <rect>
-             <x>440</x>
-             <y>10</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>语文</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>数学</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>外语</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>物理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>化学</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>生物</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>政治</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>历史</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>地理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>通用技术</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>信息技术</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>体育</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>音乐</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>美术</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QLabel" name="lb_change_state_state">
-           <property name="geometry">
-            <rect>
-             <x>560</x>
-             <y>10</y>
-             <width>70</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>在职状态:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-          <widget class="QComboBox" name="cmbBx_change_state_state">
-           <property name="geometry">
-            <rect>
-             <x>630</x>
-             <y>10</y>
-             <width>120</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <property name="editable">
-            <bool>false</bool>
-           </property>
-           <item>
-            <property name="text">
-             <string>--请选择--</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>在职</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>休假</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>离职</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>退休</string>
-            </property>
-           </item>
-          </widget>
-          <widget class="QPushButton" name="pb_change_state_search">
-           <property name="geometry">
-            <rect>
-             <x>95</x>
-             <y>60</y>
-             <width>100</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>查询</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_change_state_fire">
-           <property name="geometry">
-            <rect>
-             <x>290</x>
-             <y>60</y>
-             <width>100</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>解聘</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_change_state_vacation">
-           <property name="geometry">
-            <rect>
-             <x>410</x>
-             <y>60</y>
-             <width>100</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>休假</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_change_state_rework">
-           <property name="geometry">
-            <rect>
-             <x>530</x>
-             <y>60</y>
-             <width>100</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>返岗</string>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="pb_change_state_retire">
-           <property name="geometry">
-            <rect>
-             <x>650</x>
-             <y>60</y>
-             <width>100</width>
-             <height>40</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>退休</string>
-           </property>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
- </widget>
- <resources/>
- <connections/>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QHBoxLayout" name="horizontalLayoutTab">
+                <item>
+                    <widget class="QTabWidget" name="tabWidget">
+                        <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>420</width>
+                                <height>550</height>
+                            </size>
+                        </property>
+                        <property name="currentIndex">
+                            <number>3</number>
+                        </property>
+                        <property name="tabBarAutoHide">
+                            <bool>false</bool>
+                        </property>
+                        <widget class="QWidget" name="tab_login">
+                            <attribute name="title">
+                                <string>管理员登录</string>
+                            </attribute>
+                            <widget class="QLabel" name="lb_user_name">
+                                <property name="geometry">
+                                    <rect>
+                                        <x>50</x>
+                                        <y>100</y>
+                                        <width>60</width>
+                                        <height>60</height>
+                                    </rect>
+                                </property>
+                                <property name="text">
+                                    <string>登录ID</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" name="lb_password">
+                                <property name="geometry">
+                                    <rect>
+                                        <x>50</x>
+                                        <y>160</y>
+                                        <width>60</width>
+                                        <height>60</height>
+                                    </rect>
+                                </property>
+                                <property name="text">
+                                    <string>密码</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" name="le_user_name">
+                                <property name="geometry">
+                                    <rect>
+                                        <x>110</x>
+                                        <y>115</y>
+                                        <width>300</width>
+                                        <height>30</height>
+                                    </rect>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" name="le_password">
+                                <property name="geometry">
+                                    <rect>
+                                        <x>110</x>
+                                        <y>175</y>
+                                        <width>300</width>
+                                        <height>30</height>
+                                    </rect>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" name="pb_confirm_login">
+                                <property name="geometry">
+                                    <rect>
+                                        <x>130</x>
+                                        <y>270</y>
+                                        <width>80</width>
+                                        <height>25</height>
+                                    </rect>
+                                </property>
+                                <property name="text">
+                                    <string>确定</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton" name="pb_cancel_login">
+                                <property name="geometry">
+                                    <rect>
+                                        <x>290</x>
+                                        <y>270</y>
+                                        <width>80</width>
+                                        <height>25</height>
+                                    </rect>
+                                </property>
+                                <property name="text">
+                                    <string>取消</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" name="lb_bobo">
+                                <property name="geometry">
+                                    <rect>
+                                        <x>480</x>
+                                        <y>0</y>
+                                        <width>320</width>
+                                        <height>500</height>
+                                    </rect>
+                                </property>
+                                <property name="text">
+                                    <string>TextLabeld</string>
+                                </property>
+                            </widget>
+                            <widget class="Line" name="vertical_line">
+                                <property name="geometry">
+                                    <rect>
+                                        <x>450</x>
+                                        <y>0</y>
+                                        <width>30</width>
+                                        <height>520</height>
+                                    </rect>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Qt::Vertical</enum>
+                                </property>
+                            </widget>
+                        </widget>
+                        <widget class="QWidget" name="tab_attending">
+                            <attribute name="title">
+                                <string>在职教师列表</string>
+                            </attribute>
+                            <layout class="QGridLayout" name="verticalLayoutAttending">
+                                <item row="1" column="0">
+                                    <widget class="QWidget" name="attendingSearch" native="true">
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>420</width>
+                                                <height>50</height>
+                                            </size>
+                                        </property>
+                                        <widget class="QLabel" name="lb_search_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>30</x>
+                                                    <y>20</y>
+                                                    <width>30</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>职称</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_search_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>60</x>
+                                                    <y>20</y>
+                                                    <width>90</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>三级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>二级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>一级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>高级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>正高级教师</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_search_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>180</x>
+                                                    <y>20</y>
+                                                    <width>30</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>科目</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_search_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>210</x>
+                                                    <y>20</y>
+                                                    <width>90</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>语文</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>数学</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>外语</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>物理</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>化学</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>生物</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>政治</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>历史</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>地理</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>通用技术</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>信息技术</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>体育</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>音乐</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>美术</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_search_state">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>330</x>
+                                                    <y>20</y>
+                                                    <width>60</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>在职状态</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_search_state">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>390</x>
+                                                    <y>20</y>
+                                                    <width>90</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>在职</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>休假</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>离职</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>退休</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_search">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>590</x>
+                                                    <y>20</y>
+                                                    <width>90</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>查询</string>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                </item>
+                                <item row="0" column="0">
+                                    <widget class="QTableView" name="tv_attending">
+                                        <property name="sizeIncrement">
+                                            <size>
+                                                <width>0</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="autoScroll">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="editTriggers">
+                                            <set>QAbstractItemView::NoEditTriggers</set>
+                                        </property>
+                                        <property name="alternatingRowColors">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="selectionMode">
+                                            <enum>QAbstractItemView::SingleSelection</enum>
+                                        </property>
+                                        <property name="selectionBehavior">
+                                            <enum>QAbstractItemView::SelectRows</enum>
+                                        </property>
+                                        <property name="verticalScrollMode">
+                                            <enum>QAbstractItemView::ScrollPerItem</enum>
+                                        </property>
+                                        <property name="gridStyle">
+                                            <enum>Qt::SolidLine</enum>
+                                        </property>
+                                        <property name="cornerButtonEnabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <attribute name="verticalHeaderVisible">
+                                            <bool>false</bool>
+                                        </attribute>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="tab_hire">
+                            <attribute name="title">
+                                <string>聘用教师</string>
+                            </attribute>
+                            <layout class="QHBoxLayout" name="horizontalLayoutHire">
+                                <item>
+                                    <widget class="QWidget" name="hireInformationInput" native="true">
+                                        <widget class="QLabel" name="lb_hire_input">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>80</x>
+                                                    <y>40</y>
+                                                    <width>160</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="sizePolicy">
+                                                <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                                                    <horstretch>0</horstretch>
+                                                    <verstretch>0</verstretch>
+                                                </sizepolicy>
+                                            </property>
+                                            <property name="text">
+                                                <string>雇用教师信息输入</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_hire_input_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>80</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>姓名</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_hire_input_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>80</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="maxLength">
+                                                <number>20</number>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_hire_input_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>140</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>职称</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_hire_input_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>140</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>三级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>二级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>一级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>高级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>正高级教师</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_hire_input_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>200</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>科目</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_hire_input_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>200</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>语文</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>数学</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>外语</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>物理</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>化学</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>生物</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>政治</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>历史</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>地理</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>通用技术</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>信息技术</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>体育</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>音乐</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>美术</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_hire_input_confirm">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>300</y>
+                                                    <width>100</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>确定</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_hire_input_cancel">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>210</x>
+                                                    <y>300</y>
+                                                    <width>100</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>取消</string>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="Line" name="line">
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>5</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Qt::Vertical</enum>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QWidget" name="hireInformationOutput" native="true">
+                                        <widget class="QLabel" name="lb_hire_output">
+                                            <property name="enabled">
+                                                <bool>true</bool>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>80</x>
+                                                    <y>40</y>
+                                                    <width>160</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="sizePolicy">
+                                                <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                                                    <horstretch>0</horstretch>
+                                                    <verstretch>0</verstretch>
+                                                </sizepolicy>
+                                            </property>
+                                            <property name="text">
+                                                <string>雇用教师成功</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_hire_output_id">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>80</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>编号</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_hire_output_id">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>80</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_hire_output_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>140</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>姓名</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_hire_output_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>140</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_hire_output_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>200</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>职称</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_hire_output_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>200</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_hire_output_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>260</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>科目</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_hire_output_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>260</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_hire_output_clear">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>120</x>
+                                                    <y>390</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>清除</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_hire_output_hireDate">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>320</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>入职日期</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_hire_output_hireDate">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>320</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="tab_change_rank_information">
+                            <attribute name="title">
+                                <string>教师职称科目切换</string>
+                            </attribute>
+                            <layout class="QHBoxLayout" name="horizontalLayoutHire">
+                                <item>
+                                    <widget class="QWidget" name="changeRankInformationInput" native="true">
+                                        <widget class="QLabel" name="lb_change_rank_input_id">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>60</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>编号</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_input_id">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>60</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_input_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>120</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>姓名</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_input_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>120</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_input_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>180</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>职称</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_input_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>180</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_input_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>240</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>科目</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_input_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>240</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_input_hireDate">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>300</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>入职日期</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_input_hireDate">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>300</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_input">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>100</x>
+                                                    <y>10</y>
+                                                    <width>160</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="sizePolicy">
+                                                <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                                                    <horstretch>0</horstretch>
+                                                    <verstretch>0</verstretch>
+                                                </sizepolicy>
+                                            </property>
+                                            <property name="text">
+                                                <string>待切换教师信息输入</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_change_rank_input_new_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>430</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>三级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>二级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>一级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>高级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>正高级教师</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_change_rank_input_new_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>220</x>
+                                                    <y>430</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>语文</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>数学</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>外语</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>物理</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>化学</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>生物</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>政治</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>历史</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>地理</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>通用技术</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>信息技术</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>体育</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>音乐</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>美术</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_input_new_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>400</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>新职称</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_change_rank_input_confirm">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>70</x>
+                                                    <y>470</y>
+                                                    <width>100</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>确定</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_change_rank_input_cancel">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>220</x>
+                                                    <y>470</y>
+                                                    <width>100</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>取消</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_input_new_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>220</x>
+                                                    <y>400</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>新科目</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_input_state">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>360</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>在职状态</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_input_state">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>360</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="Line" name="line">
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>5</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Qt::Vertical</enum>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QWidget" name="changeRankInformationOutput" native="true">
+                                        <widget class="QLabel" name="lb_change_rank_output_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>120</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>姓名</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_output_id">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>60</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="maxLength">
+                                                <number>20</number>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_output_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>240</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>科目</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_output">
+                                            <property name="enabled">
+                                                <bool>true</bool>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>80</x>
+                                                    <y>10</y>
+                                                    <width>160</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="sizePolicy">
+                                                <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                                                    <horstretch>0</horstretch>
+                                                    <verstretch>0</verstretch>
+                                                </sizepolicy>
+                                            </property>
+                                            <property name="text">
+                                                <string>教师信息切换成功</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_output_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>120</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_output_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>180</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_rank_output_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>130</x>
+                                                    <y>240</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_change_rank_output_clear">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>160</x>
+                                                    <y>330</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>清除</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_output_id">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>60</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>编号</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_rank_output_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>50</x>
+                                                    <y>180</y>
+                                                    <width>80</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>职称</string>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="tab_change_state">
+                            <attribute name="title">
+                                <string>教师在职状态切换</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="verticalLayoutChangeState">
+                                <item>
+                                    <widget class="QTableView" name="tv_change_state">
+                                        <property name="sizeIncrement">
+                                            <size>
+                                                <width>0</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="autoScroll">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="editTriggers">
+                                            <set>QAbstractItemView::NoEditTriggers</set>
+                                        </property>
+                                        <property name="alternatingRowColors">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="selectionMode">
+                                            <enum>QAbstractItemView::SingleSelection</enum>
+                                        </property>
+                                        <property name="selectionBehavior">
+                                            <enum>QAbstractItemView::SelectRows</enum>
+                                        </property>
+                                        <property name="verticalScrollMode">
+                                            <enum>QAbstractItemView::ScrollPerItem</enum>
+                                        </property>
+                                        <property name="gridStyle">
+                                            <enum>Qt::SolidLine</enum>
+                                        </property>
+                                        <property name="cornerButtonEnabled">
+                                            <bool>false</bool>
+                                        </property>
+                                        <attribute name="verticalHeaderVisible">
+                                            <bool>false</bool>
+                                        </attribute>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="Line" name="line">
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>0</width>
+                                                <height>5</height>
+                                            </size>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Qt::Horizontal</enum>
+                                        </property>
+                                    </widget>
+                                </item>
+                                <item>
+                                    <widget class="QWidget" name="attendingSearch" native="true">
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>420</width>
+                                                <height>100</height>
+                                            </size>
+                                        </property>
+                                        <widget class="QLabel" name="lb_change_state_id">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>0</x>
+                                                    <y>10</y>
+                                                    <width>30</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>ID:</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_state_id">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>30</x>
+                                                    <y>10</y>
+                                                    <width>70</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_state_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>100</x>
+                                                    <y>10</y>
+                                                    <width>40</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>姓名:</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLineEdit" name="le_change_state_name">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>140</x>
+                                                    <y>10</y>
+                                                    <width>100</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_state_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>240</x>
+                                                    <y>10</y>
+                                                    <width>40</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>职称:</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_change_state_rank">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>280</x>
+                                                    <y>10</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>三级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>二级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>一级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>高级教师</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>正高级教师</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_state_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>400</x>
+                                                    <y>10</y>
+                                                    <width>40</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>科目:</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_change_state_subject">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>440</x>
+                                                    <y>10</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>语文</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>数学</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>外语</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>物理</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>化学</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>生物</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>政治</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>历史</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>地理</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>通用技术</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>信息技术</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>体育</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>音乐</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>美术</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QLabel" name="lb_change_state_state">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>560</x>
+                                                    <y>10</y>
+                                                    <width>70</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>在职状态:</string>
+                                            </property>
+                                            <property name="alignment">
+                                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                            </property>
+                                        </widget>
+                                        <widget class="QComboBox" name="cmbBx_change_state_state">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>630</x>
+                                                    <y>10</y>
+                                                    <width>120</width>
+                                                    <height>30</height>
+                                                </rect>
+                                            </property>
+                                            <property name="editable">
+                                                <bool>false</bool>
+                                            </property>
+                                            <item>
+                                                <property name="text">
+                                                    <string>--请选择--</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>在职</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>休假</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>离职</string>
+                                                </property>
+                                            </item>
+                                            <item>
+                                                <property name="text">
+                                                    <string>退休</string>
+                                                </property>
+                                            </item>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_change_state_search">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>95</x>
+                                                    <y>60</y>
+                                                    <width>100</width>
+                                                    <height>40</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>查询</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_change_state_fire">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>290</x>
+                                                    <y>60</y>
+                                                    <width>100</width>
+                                                    <height>40</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>解聘</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_change_state_vacation">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>410</x>
+                                                    <y>60</y>
+                                                    <width>100</width>
+                                                    <height>40</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>休假</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_change_state_rework">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>530</x>
+                                                    <y>60</y>
+                                                    <width>100</width>
+                                                    <height>40</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>返岗</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QPushButton" name="pb_change_state_retire">
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>650</x>
+                                                    <y>60</y>
+                                                    <width>100</width>
+                                                    <height>40</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>退休</string>
+                                            </property>
+                                        </widget>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QStatusBar" name="statusbar"/>
+    </widget>
+    <resources/>
+    <connections/>
 </ui>
